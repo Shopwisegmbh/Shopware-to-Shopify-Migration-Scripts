@@ -68,7 +68,7 @@ Repeat for additional pages:
 # Page 3 (example; keep increasing page until empty)
 curl -s -X POST "$SHOP_URL/api/search/product"   -H "Authorization: Bearer $TOKEN"   -H "Content-Type: application/json"   -d '{
     "limit": 500,
-    "page": 3,
+    "page": 2,
     "filter": [{ "type":"equals", "field":"parentId", "value": null }],
     "associations": {
       "children": {
@@ -85,7 +85,7 @@ curl -s -X POST "$SHOP_URL/api/search/product"   -H "Authorization: Bearer $TOKE
       "manufacturer": {},
       "categories": {}
     }
-  }' > products_parents_p3.json
+  }' > products_parents_p2.json
 ```
 
 Quick checks:
