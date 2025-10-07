@@ -4,14 +4,14 @@ Utilities to export products (including variants/options) from **Shopware 6** an
 
 > **Heads-up:** The CSV headers and the field mapping in `product-mapping.py` are **demo defaults** based on Shopify’s standard import format. Real stores often need tweaks (custom metafields, tag conventions, option naming, channel visibility, etc.). **Adjust the mapping to your needs.**
 
-## Ⅰ️⃣ Prerequisites
+## Prerequisites
 
 - Python 3.9+
 - `curl` for API requests
 - (Optional) `jq` for inspecting/merging JSON
 - A Shopware 6 **Integration** (Access Key ID + Secret Access Key) with Admin API permissions
 
-## Ⅱ️⃣ Create an Admin API token (Shopware 6)
+## Create an Admin API token (Shopware 6)
 
 Create an **Integration** in the Shopware admin:  
 `Settings → System → Integrations` → create → copy **Access key ID** and **Secret access key**.
@@ -34,7 +34,7 @@ Copy the `access_token` from the response and export it:
 export TOKEN="PASTE_ACCESS_TOKEN_HERE"
 ```
 
-## Ⅲ️⃣ Fetch products as JSON (parents + variants + associations)
+## Fetch products as JSON (parents + variants + associations)
 
 **Recommended:** fetch **only parent products** and include all associations so every parent carries its variants (`children`) and related entities.
 
